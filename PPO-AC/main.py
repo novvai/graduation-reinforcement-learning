@@ -111,13 +111,6 @@ for _ in range(1_000_000_000):
         action = dist.sample()
         
         next_state, reward, done, _ = env.step(action.cpu().numpy())
-        if reward>0:
-            reward *= 10
-            print('.upscale.', reward)
-        if reward < 0:
-            reward = 0
-        if done and reward < 5:
-             reward = -1
 
         action_log_prob = dist.log_prob(action)
 
