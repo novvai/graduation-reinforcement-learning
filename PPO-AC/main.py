@@ -91,7 +91,7 @@ def update_policy(states, actions, log_probs, returns, advantages, clip_param=.2
             optimizer.step()
 
 
-ep = 124616
+ep = 0
 last_reward = -np.inf
 should_render = False
 for _ in range(1_000_000_000):
